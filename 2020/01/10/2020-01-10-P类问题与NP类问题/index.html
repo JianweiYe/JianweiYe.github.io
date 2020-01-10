@@ -268,8 +268,7 @@
 <a id="more"></a>
 
 <blockquote>
-<p>##概念准备</p>
-</blockquote>
+<h2 id="概念准备"><a href="#概念准备" class="headerlink" title="概念准备"></a>概念准备</h2></blockquote>
 <h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p><code>时间复杂度</code>并不是表示一个程序解决问题需要花多少时间，而是当问题规模扩大后，程序需要的时间长度增长得有多快。</p>
 <p><em>换言之，对于高速处理数据的计算机来说，处理某一个特定数据的效率不能衡量一个程序的好坏，而应该看当这个数据的规模变大到数百倍后，程序运行时间是否还是一样，或者也跟着慢了数百倍，或者变慢了数万倍。</em></p>
 <ul>
@@ -283,8 +282,7 @@
 <h3 id="约化-Reducibility"><a href="#约化-Reducibility" class="headerlink" title="约化(Reducibility)"></a>约化(Reducibility)</h3><p>定义：如果能找到一个变化法则，对任意一个A程序的输入，都能按照这个法则变换成B程序的输入，使两程序的输出相同，那么我们说，问题A可以约化为问题B。</p>
 <p>一个问题A可以约化为问题B的含义是，可以用问题B的解法解决问题A。（也可以简单理解，问题A是B的一种特殊情况。）例如求解一元一次方程这个问题可以约化为求解一元二次方程，即可以令对应项系数不变，二次项的系数为0，将A的问题的输入参数带入到B问题的求解程序去求解。另外，约化还具有传递性，A可以化约为B，B可以约化为C，那么A也可以约化为C。</p>
 <blockquote>
-<p>##P问题/NP问题/NP-Hard问题/NP-Complete问题</p>
-</blockquote>
+<h2 id="P问题-NP问题-NP-Hard问题-NP-Complete问题"><a href="#P问题-NP问题-NP-Hard问题-NP-Complete问题" class="headerlink" title="P问题/NP问题/NP-Hard问题/NP-Complete问题"></a>P问题/NP问题/NP-Hard问题/NP-Complete问题</h2></blockquote>
 <h3 id="P问题-Polynomial"><a href="#P问题-Polynomial" class="headerlink" title="P问题(Polynomial)"></a>P问题(Polynomial)</h3><p>如果一个问题可以找到一个能在多项式的时间里解决它的算法，那么这个问题就属于<code>P问题</code>。<br>所有绝对不可能用多项式时间求解的可解问题，称为<code>指数型问题</code>。<br>当然，还有一类问题属于<code>不可解问题</code>，也就是说你无论花多少时间也不能得到解答。</p>
 <h3 id="NP问题-Non-deterministic-Polynomial"><a href="#NP问题-Non-deterministic-Polynomial" class="headerlink" title="NP问题(Non-deterministic Polynomial)"></a>NP问题(Non-deterministic Polynomial)</h3><p><strong><code>NP问题</code>是指可以在多项式的时间里验证一个解的问题。</strong>NP问题的另一个定义是，可以在多项式的时间里猜出一个解的问题。用通俗的话来解释，NP问题就是其解的正确性很容易被检验出来，这里的很容易检验指的是存在一个多项式算法。</p>
 <p>NP概念的奥妙在于，<strong>它躲开了求解到底需要多少时间这样的问题，而仅仅只是强调验证需要多少时间，</strong>从而为P与NP这一千年难题的产生埋下了伏笔。</p>
@@ -294,10 +292,11 @@
 <h3 id="NP-Complete问题"><a href="#NP-Complete问题" class="headerlink" title="NP-Complete问题"></a>NP-Complete问题</h3><p>NP-Complete问题是同时满足下面两个条件的问题。</p>
 <ul>
 <li>第一，它得是一个NP问题；</li>
-<li>第二，所有的NP问题都可以约化到它。<br>证明一个问题是 NPC问题也很简单。先证明它至少是一个NP问题，再证明其中一个已知的NPC问题能约化到它（由约化的传递性，则NPC问题定义的第二条也得以满足；至于第一个NPC问题是怎么来的，下文将介绍），这样就可以说它是NPC问题了。<br>后来，Hamilton 回路成了NPC问题，TSP问题也成了NPC问题。现在被证明是NPC问题的有很多，任何一个找到了多项式算法的话所有的NP问题都可以完美解决了。因此说，正是因为NPC问题的存在，P=NP变得难以置信。</li>
+<li>第二，所有的NP问题都可以约化到它。</li>
 </ul>
+<p>证明一个问题是 NPC问题也很简单。先证明它至少是一个NP问题，再证明其中一个已知的NPC问题能约化到它（由约化的传递性，则NPC问题定义的第二条也得以满足；至于第一个NPC问题是怎么来的，下文将介绍），这样就可以说它是NPC问题了。<br>后来，Hamilton 回路成了NPC问题，TSP问题也成了NPC问题。现在被证明是NPC问题的有很多，任何一个找到了多项式算法的话所有的NP问题都可以完美解决了。因此说，正是因为NPC问题的存在，P=NP变得难以置信。</p>
 <h3 id="NP-Hard问题"><a href="#NP-Hard问题" class="headerlink" title="NP-Hard问题"></a>NP-Hard问题</h3><p>NP-Hard问题，它满足NPC问题定义的第二条但不一定要满足第一条（就是说，NP-Hard问题要比 NPC问题的范围广）。NP-Hard问题同样难以找到多项式的算法，但它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。</p>
-<p>！<a href="https://img-blog.csdnimg.cn/20190213152851190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3NDA3NTg3,size_5,color_FFFFFF,t_70" target="_blank" rel="noopener">P类问题和NP类问题 图片</a></p>
+<p><strong>参考：</strong><br><a href="https://img-blog.csdnimg.cn/20190213152851190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3NDA3NTg3,size_5,color_FFFFFF,t_70" target="_blank" rel="noopener">P类问题和NP类问题的关系图解</a></p>
 
     </div>
 
@@ -359,7 +358,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约化-Reducibility"><span class="nav-number">2.</span> <span class="nav-text">约化(Reducibility)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题-Polynomial"><span class="nav-number">3.</span> <span class="nav-text">P问题(Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP问题-Non-deterministic-Polynomial"><span class="nav-number">4.</span> <span class="nav-text">NP问题(Non-deterministic Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题和NP问题的关系"><span class="nav-number">5.</span> <span class="nav-text">P问题和NP问题的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Complete问题"><span class="nav-number">6.</span> <span class="nav-text">NP-Complete问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Hard问题"><span class="nav-number">7.</span> <span class="nav-text">NP-Hard问题</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#概念准备"><span class="nav-number">1.</span> <span class="nav-text">概念准备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.1.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约化-Reducibility"><span class="nav-number">1.2.</span> <span class="nav-text">约化(Reducibility)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P问题-NP问题-NP-Hard问题-NP-Complete问题"><span class="nav-number">2.</span> <span class="nav-text">P问题/NP问题/NP-Hard问题/NP-Complete问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题-Polynomial"><span class="nav-number">2.1.</span> <span class="nav-text">P问题(Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP问题-Non-deterministic-Polynomial"><span class="nav-number">2.2.</span> <span class="nav-text">NP问题(Non-deterministic Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题和NP问题的关系"><span class="nav-number">2.3.</span> <span class="nav-text">P问题和NP问题的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Complete问题"><span class="nav-number">2.4.</span> <span class="nav-text">NP-Complete问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Hard问题"><span class="nav-number">2.5.</span> <span class="nav-text">NP-Hard问题</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
