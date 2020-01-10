@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="截取一段来自电影四个婚礼和一个葬礼的悼词，直到死亡将我们分开。">
-<meta name="keywords" content="思考,观影笔记">
+  <meta name="description" content="最近，在看优化求解的问题时，碰到了几个数学概念，梳理如下。">
+<meta name="keywords" content="信息学,NP问题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="直到死亡将我们分开">
-<meta property="og:url" content="http:&#x2F;&#x2F;adventurer.site&#x2F;2019&#x2F;12&#x2F;25&#x2F;2019-12-25-%E5%9B%9B%E4%B8%AA%E5%A9%9A%E7%A4%BC%E5%92%8C%E4%B8%80%E4%B8%AA%E8%91%AC%E7%A4%BC&#x2F;index.html">
+<meta property="og:title" content="P类问题与NP类问题的基本概念">
+<meta property="og:url" content="http:&#x2F;&#x2F;adventurer.site&#x2F;2020&#x2F;01&#x2F;10&#x2F;2020-01-10-P%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%8ENP%E7%B1%BB%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="Exploring Inside">
-<meta property="og:description" content="截取一段来自电影四个婚礼和一个葬礼的悼词，直到死亡将我们分开。">
+<meta property="og:description" content="最近，在看优化求解的问题时，碰到了几个数学概念，梳理如下。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-25T14:31:32.000Z">
+<meta property="og:updated_time" content="2020-01-10T06:30:02.000Z">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://adventurer.site/2019/12/25/2019-12-25-%E5%9B%9B%E4%B8%AA%E5%A9%9A%E7%A4%BC%E5%92%8C%E4%B8%80%E4%B8%AA%E8%91%AC%E7%A4%BC/">
+<link rel="canonical" href="http://adventurer.site/2020/01/10/2020-01-10-P%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%8ENP%E7%B1%BB%E9%97%AE%E9%A2%98/">
 
 
 <script id="page-configurations">
@@ -73,7 +73,7 @@
   };
 </script>
 
-  <title>直到死亡将我们分开 | Exploring Inside</title>
+  <title>P类问题与NP类问题的基本概念 | Exploring Inside</title>
   
 
 
@@ -216,7 +216,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="http://adventurer.site/2019/12/25/2019-12-25-%E5%9B%9B%E4%B8%AA%E5%A9%9A%E7%A4%BC%E5%92%8C%E4%B8%80%E4%B8%AA%E8%91%AC%E7%A4%BC/">
+    <link itemprop="mainEntityOfPage" href="http://adventurer.site/2020/01/10/2020-01-10-P%E7%B1%BB%E9%97%AE%E9%A2%98%E4%B8%8ENP%E7%B1%BB%E9%97%AE%E9%A2%98/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/jianwei.jpg">
@@ -229,7 +229,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          直到死亡将我们分开
+          P类问题与NP类问题的基本概念
         </h1>
 
         <div class="post-meta">
@@ -239,7 +239,7 @@
               </span>
               <span class="post-meta-item-text">Posted on</span>
 
-              <time title="Created: 2019-12-25 22:31:32" itemprop="dateCreated datePublished" datetime="2019-12-25T22:31:32+08:00">2019-12-25</time>
+              <time title="Created: 2020-01-10 14:30:02" itemprop="dateCreated datePublished" datetime="2020-01-10T14:30:02+08:00">2020-01-10</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -247,8 +247,8 @@
               </span>
               <span class="post-meta-item-text">In</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">读书笔记</span>
+                  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E6%A1%A3/" itemprop="url" rel="index">
+                    <span itemprop="name">技术文档</span>
                   </a>
                 </span>
             </span>
@@ -264,28 +264,40 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <blockquote>
-<p>截取一段来自电影<a href="https://movie.douban.com/subject/1294950/" target="_blank" rel="noopener">四个婚礼和一个葬礼</a>的悼词，直到死亡将我们分开。 </p>
-</blockquote>
+        <p>最近，在看优化求解的问题时，碰到了几个数学概念，梳理如下。</p>
 <a id="more"></a>
 
 <blockquote>
-<p>Movie: Mike Newell - Four Weddings and A Funeral<br>BGM: James Smith - Till death do us part<br>翻译: 骑飞象的大冒险家</p>
+<p>##概念准备</p>
 </blockquote>
-<p><em>Slience the pianos and with muffled drum,</em><br>请把那琴声噤凝，请让那鼓声偃息，</p>
-<p><em>Bring out the coffin，</em><br>请将那棺木抬出，</p>
-<p><em>Let the mourners come.</em><br>让悼念的人们，都进来坐下吧。</p>
-<p><em>Let aeroplanes circle moaning overhead scribbling on the sky the message.</em><br>让盘旋的飞机，都为今天呜咽。</p>
-<p><em>He was my North, my South, my East and West，</em><br>他曾随我去到这世界的每一处角落，</p>
-<p><em>My working week and my Sunday rest,</em><br>曾陪伴我打发枯燥的工作，享受明媚的周末，</p>
-<p><em>My noon, my midnight, my talk, my song.</em><br>无数个日夜，他出现在我的每一句话和每一首歌里。</p>
-<p><em>I thought that love would last for ever.</em><br>我曾以为爱可以天长地久。</p>
-<p><em>I was wrong.</em><br>但我错了。</p>
-<p><em>The stars are not wanted now,</em><br>现在，我不再渴望繁星了，</p>
-<p><em>Put out everyone.</em><br>把它们都熄灭吧。</p>
-<p><em>Pack up the moon and dismantle the sun,</em><br>把那温柔的月亮也收起吧，把热情的太阳也遮掩吧</p>
-<p><em>Pour away the ocean and sweep up the wood.</em><br>把碧海蓝天都枯涸暗淡吧，把层林浸染也都悉数褪去吧。</p>
-<p><em>For nothing now are evercome to any good.</em><br>因为从此，世上再无美好。</p>
+<h3 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h3><p><code>时间复杂度</code>并不是表示一个程序解决问题需要花多少时间，而是当问题规模扩大后，程序需要的时间长度增长得有多快。</p>
+<p><em>换言之，对于高速处理数据的计算机来说，处理某一个特定数据的效率不能衡量一个程序的好坏，而应该看当这个数据的规模变大到数百倍后，程序运行时间是否还是一样，或者也跟着慢了数百倍，或者变慢了数万倍。</em></p>
+<ul>
+<li>不管数据有多大，程序处理花的时间始终是那么多的，我们就说这个程序很好，具有O(1)的时间复杂度，也称<code>常数级复杂度</code>；</li>
+<li>数据规模变得有多大，花的时间也跟着变得有多长，这个程序的时间复杂度就是O(n)，比如找n个数中的最大值；</li>
+<li>而像冒泡排序、插入排序等，数据扩大2倍，时间变慢4倍的，属于O(n^2)的复杂度。</li>
+<li>还有一些穷举类的算法，所需时间长度成几何阶数上涨，这就是O(a^n)的<code>指数级复杂度</code>，甚至O(n!)的<code>阶乘级复杂度</code>。</li>
+</ul>
+<p><em>不会存在O(2n^2)的复杂度，因为前面的那个“2”是系数，根本不会影响到整个程序的时间增长。同样地，O (n^3+n^2)的复杂度也就是O(n^3)的复杂度。因此，我们会说，一个O(0.01n^3)的程序的效率比O(100n^2)的效率低，尽管在n很小的时候，前者优于后者，但后者时间随数据规模增长得慢，最终O(n^3)的复杂度将远远超过O(n^2)。我们也说，O(n^100)的复杂度小于O(1.01^n)的复杂度。</em></p>
+<p>容易看出，前面的几类复杂度被分为两种级别，其中后者的复杂度无论如何都远远大于前者：一种是O(1),O(log(n)),O(n^a)等，我们把它叫做 <strong><code>多项式级的复杂度</code></strong>，因为它的规模n出现在底数的位置；另一种是O(a^n)和O(n!)型复杂度，它是 <strong><code>非多项式级的复杂度</code></strong>，其复杂度计算机往往不能承受。当我们在解决一个问题时，我们选择的算法通常都需要是多项式级的复杂度，非多项式级的复杂度需要的时间太多，往往会超时，除非是数据规模非常小。</p>
+<h3 id="约化-Reducibility"><a href="#约化-Reducibility" class="headerlink" title="约化(Reducibility)"></a>约化(Reducibility)</h3><p>定义：如果能找到一个变化法则，对任意一个A程序的输入，都能按照这个法则变换成B程序的输入，使两程序的输出相同，那么我们说，问题A可以约化为问题B。</p>
+<p>一个问题A可以约化为问题B的含义是，可以用问题B的解法解决问题A。（也可以简单理解，问题A是B的一种特殊情况。）例如求解一元一次方程这个问题可以约化为求解一元二次方程，即可以令对应项系数不变，二次项的系数为0，将A的问题的输入参数带入到B问题的求解程序去求解。另外，约化还具有传递性，A可以化约为B，B可以约化为C，那么A也可以约化为C。</p>
+<blockquote>
+<p>##P问题/NP问题/NP-Hard问题/NP-Complete问题</p>
+</blockquote>
+<h3 id="P问题-Polynomial"><a href="#P问题-Polynomial" class="headerlink" title="P问题(Polynomial)"></a>P问题(Polynomial)</h3><p>如果一个问题可以找到一个能在多项式的时间里解决它的算法，那么这个问题就属于<code>P问题</code>。<br>所有绝对不可能用多项式时间求解的可解问题，称为<code>指数型问题</code>。<br>当然，还有一类问题属于<code>不可解问题</code>，也就是说你无论花多少时间也不能得到解答。</p>
+<h3 id="NP问题-Non-deterministic-Polynomial"><a href="#NP问题-Non-deterministic-Polynomial" class="headerlink" title="NP问题(Non-deterministic Polynomial)"></a>NP问题(Non-deterministic Polynomial)</h3><p><strong><code>NP问题</code>是指可以在多项式的时间里验证一个解的问题。</strong>NP问题的另一个定义是，可以在多项式的时间里猜出一个解的问题。用通俗的话来解释，NP问题就是其解的正确性很容易被检验出来，这里的很容易检验指的是存在一个多项式算法。</p>
+<p>NP概念的奥妙在于，<strong>它躲开了求解到底需要多少时间这样的问题，而仅仅只是强调验证需要多少时间，</strong>从而为P与NP这一千年难题的产生埋下了伏笔。</p>
+<p>举出一个不大可能会有多项式级算法的问题来：<code>Hamilton回路</code>。问题是这样的：给你一个图，问你能否找到一条经过每个顶点一次且恰好一次（不遗漏也不重复）最后又走回来的路（满足这个条件的路径叫做Hamilton回路）。这个问题现在还没有找到多项式级的算法。</p>
+<p>当然有不是NP问题的问题，即你猜到了解但是没用，因为你不能在多项式的时间里去验证它。下面我要举的例子是一个经典的例子，它指出了一个目前还没有办法在多项式的时间里验证一个解的问题。很显然，前面所说的 <strong>Hamilton回路是NP问题</strong>，因为验证一条路是否恰好经过了每一个顶点非常容易。但我要把问题换成这样：<strong>试问一个图中是否不存在Hamilton回路。这样问题就没法在多项式的时间里进行验证了，因为除非你试过所有的路，否则你不敢断定它“没有Hamilton回路”。</strong></p>
+<h3 id="P问题和NP问题的关系"><a href="#P问题和NP问题的关系" class="headerlink" title="P问题和NP问题的关系"></a>P问题和NP问题的关系</h3><p>显然，P肯定是NP，因为你既然能用多项式求解，就肯定能用多项式验证（难不成我再算一遍！）。<br>关键是，人们想知道，是否所有的NP问题都是P类问题。用集合的观点来说，显然有P属于NP，那么究竟是否有P=NP？<br>目前为止这个问题还没有结论。但人们普遍认为，P=NP不成立，即存在至少一个不可能有多项式级复杂度的算法的NP问题。人们坚信P≠NP的理由是，在研究NP问题的过程中找出了一类非常特殊的NP问题叫做NP-完全问题，也即所谓的<code>NP-Complete问题</code>。</p>
+<h3 id="NP-Complete问题"><a href="#NP-Complete问题" class="headerlink" title="NP-Complete问题"></a>NP-Complete问题</h3><p>NP-Complete问题是同时满足下面两个条件的问题。</p>
+<ul>
+<li>第一，它得是一个NP问题；</li>
+<li>第二，所有的NP问题都可以约化到它。<br>证明一个问题是 NPC问题也很简单。先证明它至少是一个NP问题，再证明其中一个已知的NPC问题能约化到它（由约化的传递性，则NPC问题定义的第二条也得以满足；至于第一个NPC问题是怎么来的，下文将介绍），这样就可以说它是NPC问题了。<br>后来，Hamilton 回路成了NPC问题，TSP问题也成了NPC问题。现在被证明是NPC问题的有很多，任何一个找到了多项式算法的话所有的NP问题都可以完美解决了。因此说，正是因为NPC问题的存在，P=NP变得难以置信。</li>
+</ul>
+<h3 id="NP-Hard问题"><a href="#NP-Hard问题" class="headerlink" title="NP-Hard问题"></a>NP-Hard问题</h3><p>NP-Hard问题，它满足NPC问题定义的第二条但不一定要满足第一条（就是说，NP-Hard问题要比 NPC问题的范围广）。NP-Hard问题同样难以找到多项式的算法，但它不一定是NP问题。即使NPC问题发现了多项式级的算法，NP-Hard问题有可能仍然无法得到多项式级的算法。事实上，由于NP-Hard放宽了限定条件，它将有可能比所有的NPC问题的时间复杂度更高从而更难以解决。</p>
+<p>！<a href="https://img-blog.csdnimg.cn/20190213152851190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L20wXzM3NDA3NTg3,size_5,color_FFFFFF,t_70" target="_blank" rel="noopener">P类问题和NP类问题 图片</a></p>
 
     </div>
 
@@ -296,8 +308,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 思考</a>
-              <a href="/tags/%E8%A7%82%E5%BD%B1%E7%AC%94%E8%AE%B0/" rel="tag"><i class="fa fa-tag"></i> 观影笔记</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 信息学</a>
+              <a href="/tags/NP%E9%97%AE%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> NP问题</a>
           </div>
 
         
@@ -306,13 +318,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/12/17/2019-12-17-%E8%AF%BB%E3%80%8A%E8%AF%BB%E4%B9%A6%E4%B8%8E%E5%81%9A%E4%BA%BA%E3%80%8B%E6%9C%89%E6%84%9F/" rel="prev" title="读季羡林《读书与做人》有感">
-      <i class="fa fa-chevron-left"></i> 读季羡林《读书与做人》有感
+    <a href="/2020/01/09/2020-01-09-%E5%86%AC%E6%97%A5%E5%A4%B1%E7%9C%A0%E7%97%87/" rel="prev" title="Winter Insomnia - Raymond Carver">
+      <i class="fa fa-chevron-left"></i> Winter Insomnia - Raymond Carver
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/01/05/2020-01-04-%E7%90%86%E6%83%B3%E7%94%B5%E5%BD%B1%E4%B8%8E%E7%94%B5%E5%BD%B1%E7%90%86%E6%83%B3-%E9%83%91%E6%B4%9E%E5%A4%A9%E8%AE%BF%E8%B0%88%E5%BD%95/" rel="next" title="理想电影与电影理想——郑洞天访谈录">
-      理想电影与电影理想——郑洞天访谈录 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -350,6 +359,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#时间复杂度"><span class="nav-number">1.</span> <span class="nav-text">时间复杂度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#约化-Reducibility"><span class="nav-number">2.</span> <span class="nav-text">约化(Reducibility)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题-Polynomial"><span class="nav-number">3.</span> <span class="nav-text">P问题(Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP问题-Non-deterministic-Polynomial"><span class="nav-number">4.</span> <span class="nav-text">NP问题(Non-deterministic Polynomial)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#P问题和NP问题的关系"><span class="nav-number">5.</span> <span class="nav-text">P问题和NP问题的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Complete问题"><span class="nav-number">6.</span> <span class="nav-text">NP-Complete问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NP-Hard问题"><span class="nav-number">7.</span> <span class="nav-text">NP-Hard问题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
